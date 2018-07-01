@@ -66,7 +66,7 @@ public class DiaryDbHelper extends SQLiteOpenHelper {
             while (cursor.moveToNext()) {
                 dataModel= new DataModel();
                 String title = cursor.getString(cursor.getColumnIndexOrThrow(DiaryEntry.COLUMN_MEMO_TITLE));
-                String date = cursor.getString(cursor.getColumnIndexOrThrow(DiaryEntry.COLUMN_MEMO_DATE));
+                int date = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow(DiaryEntry.COLUMN_MEMO_DATE)));
                 String content = cursor.getString(cursor.getColumnIndexOrThrow(DiaryEntry.COLUMN_MEMO_CONTENT));
                 String location = cursor.getString(cursor.getColumnIndexOrThrow(DiaryEntry.COLUMN_MEMO_LOCATION));
                 String image = cursor.getString(cursor.getColumnIndexOrThrow(DiaryEntry.COLUMN_MEMO_IMAGE));
