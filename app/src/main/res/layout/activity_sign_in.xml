@@ -5,6 +5,7 @@
     android:id="@+id/sign_in_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".Authetication.SignIn">
 
 
@@ -18,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/googleg_standard_color_18" />
+        android:background="@drawable/logo" />
 
     <EditText
         android:id="@+id/et_email"

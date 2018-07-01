@@ -4,4 +4,7 @@
     <string name="email_address">Email Address</string>
     <string name="sign_in">Sign In</string>
     <string name="create_account">Don\'t have an Account?</string>
+    <string name="signin_acc">Already have Account</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="diary">DIARY</string>
 </resources>

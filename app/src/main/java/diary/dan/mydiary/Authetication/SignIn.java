@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -38,6 +39,7 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
     Button btn_signin;
     SignInButton btn_google;
     ProgressBar signin_progress;
+    TextView tv_signin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,7 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
         //populate views
         populateViews();
         btn_signin.setOnClickListener(this);
+        tv_signin.setOnClickListener(this);
 
         //Google auth
         // Configure sign-in to request the user's ID, email address, and basic
@@ -83,6 +86,7 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
         btn_signin = (Button) findViewById(R.id.btn_submit);
         btn_google = (SignInButton) findViewById(R.id.sign_in_button);
         signin_progress = (ProgressBar) findViewById(R.id.signin_progress);
+        tv_signin = (TextView) findViewById(R.id.tv_createAccount);
     }
 
     @Override
@@ -167,7 +171,14 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
                 signin_progress.setVisibility(View.VISIBLE);
                 signInUser(et_email.getText().toString(), et_password.getText().toString());
                 break;
+            case R.id.tv_createAccount:
+                signUp();
         }
+    }
+
+    private void signUp() {
+        Intent intent = new Intent(SignIn.this, SignUp.class);
+        startActivity(intent);
     }
 
     private void signIn() {
