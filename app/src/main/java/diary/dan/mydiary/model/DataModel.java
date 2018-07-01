@@ -1,11 +1,35 @@
 package diary.dan.mydiary.model;
 
+import java.util.Calendar;
+import java.util.Date;
+
 public class DataModel {
 
+    public DataModel(int id, String title, String content, String location, int date, String image) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.location = location;
+        this.date = date;
+        this.image = image;
+    }
+    public DataModel(){
+
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public  int id;
     public String title;
     public String content;
     public String location;
-    public String date;
+    public int date;
     public String image;
 
 
@@ -33,11 +57,11 @@ public class DataModel {
         this.location = location;
     }
 
-    public String getDate() {
+    public int getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(int date) {
         this.date = date;
     }
 

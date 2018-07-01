@@ -46,20 +46,21 @@
                         android:layout_height="wrap_content"
                         tools:text="Retirement"
                         android:textColor="@color/colorGray"
-                        android:textSize="15dp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:id="@+id/item_title"
 
                         />
 
                     <TextView
+                        android:id="@+id/item_content"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        tools:text="Content goes here ........."
-                        android:id="@+id/item_content"
+                        android:maxLength="100"
                         android:textColor="@color/colorLightGray"
-                        android:textSize="14dp" />
+                        android:textSize="14sp"
+                        tools:text="Content goes here ........." />
                 </LinearLayout>
 
                 <LinearLayout

@@ -46,16 +46,6 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        // hide status bar
-        View decorView = getWindow().getDecorView();
-        // Hide the status bar.
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
-        // Remember that you should never show the action bar if the
-        // status bar is hidden, so hide that too if necessary.
-        ActionBar actionBar = getActionBar();
-        actionBar.hide();
-
         //populate views
         populateViews();
         btn_signin.setOnClickListener(this);
@@ -64,7 +54,7 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
         //Google auth
         // Configure sign-in to request the user's ID, email address, and basic
         // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+/*        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
 
@@ -74,7 +64,7 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
         // Set the dimensions of the sign-in button.
         btn_google.setSize(SignInButton.SIZE_STANDARD);
 
-        btn_google.setOnClickListener(this);
+        btn_google.setOnClickListener(this);*/
 
         //Other Email signin
 
@@ -99,7 +89,6 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void updateUIG(GoogleSignInAccount acct) {
-        //update with google sign in @TODO 1: add the google signin screen result
 
         Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
 

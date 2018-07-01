@@ -34,5 +34,8 @@ dependencies {
     //google auth
     implementation 'com.google.android.gms:play-services-auth:15.0.1'
 
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'jp.wasabeef:blurry:2.1.1'
 }
 apply plugin: 'com.google.gms.google-services'
